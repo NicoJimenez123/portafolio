@@ -3,7 +3,7 @@ import PaginaPrincipal from './views/PaginaPrincipal.vue';
 </script>
 
 <template>
-  <PaginaPrincipal>
+  <PaginaPrincipal />
 </template>
 
 <style scoped>
