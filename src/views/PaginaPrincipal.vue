@@ -1,5 +1,7 @@
 <template>
-  <div>Pagina Principal</div>
+  <div>Pagina Principal
+<p>Hola vercel</p>
+	</div>
 </template>
 
 <script setup>
