@@ -1,9 +1,8 @@
 <template>
   <div>
-    <AppTopBar />
+    <h3>Página Principal</h3>
 	</div>
 </template>
 
 <script setup>
-import AppTopBar from '../components/AppTopBar.vue';
 </script>
