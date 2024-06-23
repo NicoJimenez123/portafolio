@@ -1,10 +1,15 @@
-import { createRouter, createWebHistory } from "vue-router";
-import App from "./App.vue";
+import { RouterView, createRouter, createWebHistory } from "vue-router";
 
 const routes = [
   {
     path: '/',
-    component: App,
+    component: RouterView,
+    children: [
+      {
+        path: 'home',
+        component: () => import('./views/PaginaPrincipal.vue')
+      }
+    ]
   }
 ]
 
