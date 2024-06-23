@@ -8,9 +8,7 @@ import AppTopBar from './components/AppTopBar.vue'
 <template>
   <div>
     <AppTopBar />
-    <AppBody>
-      <RouterView />
-    </AppBody>
+    <AppBody />
     <AppFooter />
   </div>
 </template>
