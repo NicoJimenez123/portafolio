@@ -1,9 +1,9 @@
 <template>
-  <div>Pagina Principal
-<p>Hola vercel</p>
+  <div>
+    <AppTopBar />
 	</div>
 </template>
 
 <script setup>
-
+import AppTopBar from '../components/AppTopBar.vue';
 </script>
