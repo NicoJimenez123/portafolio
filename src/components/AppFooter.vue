@@ -1,5 +1,5 @@
 <template>
   <nav class="footer">
-    Nicolas Jimenez
+    Nicolas Jimenez (poner ícono de gato)
   </nav>
 </template>
