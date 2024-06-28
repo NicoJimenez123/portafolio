@@ -2,13 +2,10 @@
     <nav class="topbar">
 			<ul>
 				<li>
-					<a href="#">Logo</a>
+					<router-link to="/home">Home (ícono de gato)</router-link>
 				</li>
 				<li>
-					<a href="#">Titulo</a>
-				</li>
-				<li>
-					<a href="#">redes</a>
+					<a href="#">Portafolio</a>
 				</li>
 				<li>
 					<button id="toggle-theme">Cambiar Tema</button>
