@@ -1,8 +1,78 @@
+/* Resetear márgenes, paddings y establecer el modelo de caja */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Establecer variables para los temas */
+:root {
+    --bg-color: #1E1E24;
+    --text-color: #ffffff;
+    --topbar-bg-color: #307351;
+    --footer-bg-color: #307351;
+    --footer-text-color: #ffffff;
+}
+
+[data-theme="light"] {
+    --bg-color: #f0f0f0;
+    --text-color: #333;
+    --topbar-bg-color: #ccc;
+    --footer-bg-color: #ccc;
+    --footer-text-color: #3b3636;
+}
+
+/* Establecer la altura y el ancho al 100% */
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif; /* Fuente base */
+    line-height: 1.6; /* Altura de línea base */
+    -webkit-font-smoothing: antialiased; /* Suavizado de fuentes para Webkit */
+    -moz-osx-font-smoothing: grayscale; /* Suavizado de fuentes para Firefox en macOS */
+}
+
+/* Establecer el color de fondo y color del texto */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.appbody {
+    min-height: 100%;
+}
+
+.topbar {
+    height: 3rem;
+}
+
 .topbar ul {
+    background-color: var(--topbar-bg-color);
     display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
     justify-content: space-around;
+    align-items: center;
+    height: 100%;
 }
 
+.topbar ul li a {
+    color: var(--text-color);
+}
+
+.footer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    height: 2.5rem; /* Footer height */
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+    padding: 10px;
+    text-align: center;
+}
