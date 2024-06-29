@@ -1,14 +1,19 @@
 <template>
-  <div class="ViewPaginaPrincipal">
-    <h3>Página Principal del Portafolio</h3>
-    <ul>
-      <li>
-        Proyecto 1
-      </li>
-      <li>
-        Proyecto 2
-      </li>
-    </ul>
+  <div id="ViewPaginaPrincipal">
+    <section id="titulo">
+      <h3>Página Principal del Portafolio</h3>
+    </section>
+    <section id="presentacion">Sobre mí</section>
+    <section id="proyectos">
+      <ul>
+        <li>
+          Proyecto 1
+        </li>
+        <li>
+          Proyecto 2
+        </li>
+      </ul>
+    </section>
 	</div>
 </template>
 
@@ -16,7 +21,7 @@
 </script>
 
 <style>
-.ViewPaginaPrincipal {
+#ViewPaginaPrincipal {
   display: block;
   height: 100%;
   width: 100%;
@@ -25,7 +30,7 @@
   padding: 5rem;
 }
 
-.ViewPaginaPrincipal ul {
+#ViewPaginaPrincipal ul {
   list-style: none;
 }
 </style>
