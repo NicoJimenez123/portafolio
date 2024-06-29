@@ -5,19 +5,14 @@
     </section>
     <section id="presentacion">Sobre mí</section>
     <section id="proyectos">
-      <ul>
-        <li>
-          Proyecto 1
-        </li>
-        <li>
-          Proyecto 2
-        </li>
-      </ul>
+      <ListadoProyectos />
     </section>
 	</div>
 </template>
 
 <script setup>
+import ListadoProyectos from '../components/ListadoProyectos.vue';
+
 </script>
 
 <style>
