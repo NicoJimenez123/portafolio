@@ -2,7 +2,10 @@
     <nav class="topbar">
 			<ul>
 				<li>
-					<router-link to="/home">Home (ícono de gato)</router-link>
+					<router-link to="/home" id="linkHome">
+						Home
+						<img :src='gatini' alt="icono de gato"/>
+					</router-link>
 				</li>
 				<li>
 					<a href="#">Portafolio</a>
@@ -15,4 +18,16 @@
 </template>
 
 <script setup>
+import gatini from '../assets/gatini.svg'
 </script>
+
+<style>
+#linkHome {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.topbar img {
+	width: 2rem;
+}
+</style>
