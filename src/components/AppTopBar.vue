@@ -2,7 +2,7 @@
     <nav class="topbar">
 			<ul>
 				<li>
-					<router-link to="/home" id="linkHome">
+					<router-link to="/" id="linkHome">
 						Home
 						<img :src='gatini' alt="icono de gato"/>
 					</router-link>
