@@ -32,7 +32,11 @@ const onClickTecnologia = (event) => {
     tecnologiasSeleccionadas.value.splice(tecnologiasSeleccionadas.value.indexOf(event), 1)
   }
   // Modificar proyectos dependendiendo de las tecnologias seleccionadas
-  if (tecnologiasSeleccionadas.value.length === 0){ return true }
+  if (tecnologiasSeleccionadas.value.length === 0){
+    proyectos.value = proyectos.value.map(proyecto => {
+      return {...proyecto, oculto: false}
+    })
+  }
   else {
     proyectos.value = proyectos.value.map((proyecto) => {
       if (proyecto.tecnologias.some((tecnologia) => tecnologiasSeleccionadas.value.includes(tecnologia))) {
