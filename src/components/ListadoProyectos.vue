@@ -1,16 +1,14 @@
 <template>
   <div>
     <ul id="listaProyectos">
-      <li v-for="proyecto in proyectos" :key="proyecto.id">
-        <p class="proyecto proyecto-ambito"> {{ proyecto.ambito }} </p>
-        <p class="proyecto proyecto-nombre"> {{ proyecto.nombre }} </p>
-        <p class="proyecto proyecto-descripcion"> {{ proyecto.descripcion }} </p>
-      </li>
+      <ItemProyecto :proyecto="proyecto" v-for="proyecto in proyectos" :key="proyecto.id" />
     </ul>
   </div>
 </template>
 
 <script setup>
+import ItemProyecto from './ItemProyecto.vue';
+
 const ambitos = {
   laboral: 'Trabajo',
   personal: 'Personal',
@@ -26,8 +24,8 @@ const proyectos = [
 #listaProyectos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  grid-gap: 1rem;
-  padding: 1rem;
+  grid-gap: 2rem;
+  padding: 5rem;
   justify-items: center;
   align-items: center;
   text-align: center;
