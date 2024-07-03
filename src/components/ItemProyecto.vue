@@ -1,5 +1,5 @@
 <template>
-  <div :class="`item-proyecto ${props.oculto ? 'proyecto-oculto' : 'proyecto-mostrar'}`">
+  <div :class="`item-proyecto ${localOculto ? 'proyecto-oculto' : 'proyecto-mostrar'}`">
     <p class="proyecto proyecto-ambito"> {{ props.ambito }} </p>
     <p class="proyecto proyecto-nombre"> {{ props.nombre }} </p>
     <p class="proyecto proyecto-descripcion"> {{ props.descripcion }} </p>
@@ -8,7 +8,7 @@
 </template>
 
 <script setup>
-import { watch } from 'vue';
+import { ref, watch } from 'vue';
 
 const props = defineProps({
   ambito: String,
@@ -18,8 +18,10 @@ const props = defineProps({
   oculto: Boolean
 })
 
-watch(() => props.oculto, () => {
-  alert(props.oculto)
+const localOculto = ref(props.oculto)
+
+watch(() => props.oculto, (newValue) => {
+  localOculto.value = newValue
 })
 </script>
 
