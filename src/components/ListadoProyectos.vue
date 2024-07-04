@@ -7,7 +7,7 @@
         @click="onClickTecnologia(tecnologia)"
         :class="`${tecnologiasSeleccionadas.includes(tecnologia) ? 'tecnologia-seleccionada' : 'tecnologia-no-seleccionada'}`"
       >
-        {{ tecnologia }}
+        <img :src="`/src/assets/${tecnologia}.svg`" :alt="`Icono de ${tecnologia}`" />
       </button>
     </div>
     <ul id="listaProyectos">
@@ -19,6 +19,11 @@
 <script setup>
 import { ref, computed } from 'vue';
 import ItemProyecto from './ItemProyecto.vue';
+import iconoJs from '../assets/Javascript.svg'
+import iconoNode from '../assets/Node.svg'
+import iconoReact from '../assets/ReactJS.svg'
+import iconoVue from '../assets/VueJS.svg'
+import iconoPython from '../assets/Python.svg'
 
 const tecnologias = ['Python', 'Javascript', 'ReactJS', 'VueJS']
 
@@ -81,16 +86,20 @@ const proyectos = ref([
 
 #listaTecnologias button{
   width: 100%;
-  height: 2rem;
-  border-radius: 0.5rem;
+  height: 3rem;
+  border-radius: 1rem;
   border: none;
   color: var(--text-color);
-  background-color: var(--topbar-bg-color);
+  background-color: rgb(49, 49, 49);
   cursor: pointer;
+  padding: 0.5rem;
 }
 
-#listaTecnologias button.tecnologia-seleccionada{
-  text-decoration: line-through;
+#listaTecnologias button img {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 #listaProyectos{
