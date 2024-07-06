@@ -17,13 +17,8 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
+import { ref, nextTick, onUpdated } from 'vue';
 import ItemProyecto from './ItemProyecto.vue';
-import iconoJs from '../assets/Javascript.svg'
-import iconoNode from '../assets/Node.svg'
-import iconoReact from '../assets/ReactJS.svg'
-import iconoVue from '../assets/VueJS.svg'
-import iconoPython from '../assets/Python.svg'
 
 const tecnologias = ['Python', 'Javascript', 'ReactJS', 'VueJS']
 
@@ -61,6 +56,24 @@ const proyectos = ref([
   {id: 2, nombre: 'Apps de Notas', descripcion: 'App de notas que hice hace 3 años usando ReactJS', ambito: ambitos.personal, oculto: false, tecnologias: ['Javascript', 'ReactJS']},
   {id: 3, nombre: 'Cajero Automático', descripcion: 'App que hice con python, un verano aburrido y solo utilizando mi celular', ambito: ambitos.personal, oculto: false, tecnologias: ['Python']}
 ])
+
+onUpdated(() => {
+ // Modificar el brillo de los botones en base a si están seleccionados o no
+ let listadoBotonesTecnologia = document.getElementById('listaTecnologias').children
+  if(tecnologiasSeleccionadas.value.length > 0){
+    for(let i = 0; i < listadoBotonesTecnologia.length; i++){
+      if(listadoBotonesTecnologia[i].classList.contains('tecnologia-seleccionada')){
+        listadoBotonesTecnologia[i].style.filter = 'brightness(1)'
+      } else {
+        listadoBotonesTecnologia[i].style.filter = 'brightness(0.25)'
+      }
+    }
+  } else {
+    for(let i = 0; i < listadoBotonesTecnologia.length; i++){
+      listadoBotonesTecnologia[i].style.filter = 'brightness(1)'
+    }
+  }
+})
 </script>
 
 <style scoped>
